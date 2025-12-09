@@ -1,23 +1,41 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const navItems = [
-  { name: "Home", href: "#hero" },
-  { name: "About", href: "#about" },
-  { name: "Projects", href: "#projects" },
-  { name: "Skills", href: "#skills" },
-  { name: "Articles", href: "#articles" },
-  { name: "Contact", href: "#contact" },
+  { name: "Home", href: "#hero", isSection: true },
+  { name: "About", href: "#about", isSection: true },
+  { name: "Projects", href: "#projects", isSection: true },
+  { name: "Skills", href: "#skills", isSection: true },
+  { name: "Certificates", href: "/certificates", isSection: false },
+  { name: "Articles", href: "#articles", isSection: true },
+  { name: "Contact", href: "#contact", isSection: true },
 ];
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
-  const scrollToSection = (href: string) => {
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+  const handleNavClick = (item: typeof navItems[0]) => {
+    if (item.isSection) {
+      if (location.pathname !== "/") {
+        navigate("/");
+        setTimeout(() => {
+          const element = document.querySelector(item.href);
+          if (element) {
+            element.scrollIntoView({ behavior: "smooth" });
+          }
+        }, 100);
+      } else {
+        const element = document.querySelector(item.href);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }
+    } else {
+      navigate(item.href);
     }
     setIsOpen(false);
   };
@@ -35,7 +53,7 @@ const Navigation = () => {
             href="#hero"
             onClick={(e) => {
               e.preventDefault();
-              scrollToSection("#hero");
+              handleNavClick({ name: "Home", href: "#hero", isSection: true });
             }}
             className="font-orbitron text-2xl font-bold gradient-text"
             whileHover={{ scale: 1.05 }}
@@ -47,13 +65,9 @@ const Navigation = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
             {navItems.map((item, index) => (
-              <motion.a
+              <motion.button
                 key={item.name}
-                href={item.href}
-                onClick={(e) => {
-                  e.preventDefault();
-                  scrollToSection(item.href);
-                }}
+                onClick={() => handleNavClick(item)}
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 + 0.3 }}
@@ -61,7 +75,7 @@ const Navigation = () => {
               >
                 {item.name}
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300" />
-              </motion.a>
+              </motion.button>
             ))}
           </div>
 
@@ -94,20 +108,16 @@ const Navigation = () => {
             <motion.div className="absolute right-0 top-0 bottom-0 w-64 bg-card/90 backdrop-blur-xl border-l border-border/30 p-8 pt-24">
               <div className="flex flex-col gap-6">
                 {navItems.map((item, index) => (
-                  <motion.a
+                  <motion.button
                     key={item.name}
-                    href={item.href}
-                    onClick={(e) => {
-                      e.preventDefault();
-                      scrollToSection(item.href);
-                    }}
+                    onClick={() => handleNavClick(item)}
                     initial={{ opacity: 0, x: 50 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: index * 0.1 }}
-                    className="font-rajdhani text-lg uppercase tracking-wider text-foreground/70 hover:text-primary transition-colors duration-300"
+                    className="font-rajdhani text-lg uppercase tracking-wider text-foreground/70 hover:text-primary transition-colors duration-300 text-left"
                   >
                     {item.name}
-                  </motion.a>
+                  </motion.button>
                 ))}
               </div>
             </motion.div>
