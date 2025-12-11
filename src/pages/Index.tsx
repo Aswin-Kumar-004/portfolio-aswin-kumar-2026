@@ -11,6 +11,7 @@ import CallToAction from "@/components/CallToAction";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import ExperienceSection from "@/components/ExperienceSection";
+import ScrollToTop from "@/components/ScrollToTop";
 
 const Index = () => {
   return (
@@ -37,6 +38,7 @@ const Index = () => {
       </main>
 
       <Footer />
+      <ScrollToTop />
     </motion.div>
   );
 };

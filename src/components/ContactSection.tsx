@@ -141,11 +141,12 @@ const ContactSection = () => {
             <form onSubmit={handleSubmit} className="glass-card p-8">
               <div className="grid sm:grid-cols-2 gap-6 mb-6">
                 <div>
-                  <label className="font-rajdhani text-sm text-muted-foreground mb-2 block">
+                  <label htmlFor="name-input" className="font-rajdhani text-sm text-muted-foreground mb-2 block">
                     Your Name
                   </label>
                   <input
                     type="text"
+                    id="name-input"
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
@@ -155,11 +156,12 @@ const ContactSection = () => {
                   />
                 </div>
                 <div>
-                  <label className="font-rajdhani text-sm text-muted-foreground mb-2 block">
+                  <label htmlFor="email-input" className="font-rajdhani text-sm text-muted-foreground mb-2 block">
                     Your Email
                   </label>
                   <input
                     type="email"
+                    id="email-input"
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
@@ -171,11 +173,12 @@ const ContactSection = () => {
               </div>
 
               <div className="mb-6">
-                <label className="font-rajdhani text-sm text-muted-foreground mb-2 block">
+                <label htmlFor="subject-input" className="font-rajdhani text-sm text-muted-foreground mb-2 block">
                   Subject
                 </label>
                 <input
                   type="text"
+                  id="subject-input"
                   name="subject"
                   value={formData.subject}
                   onChange={handleChange}
@@ -186,11 +189,12 @@ const ContactSection = () => {
               </div>
 
               <div className="mb-6">
-                <label className="font-rajdhani text-sm text-muted-foreground mb-2 block">
+                <label htmlFor="message-input" className="font-rajdhani text-sm text-muted-foreground mb-2 block">
                   Message
                 </label>
                 <textarea
                   name="message"
+                  id="message-input"
                   value={formData.message}
                   onChange={handleChange}
                   required

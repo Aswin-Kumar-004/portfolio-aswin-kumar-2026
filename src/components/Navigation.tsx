@@ -85,6 +85,7 @@ const Navigation = () => {
             whileTap={{ scale: 0.9 }}
             onClick={() => setIsOpen(!isOpen)}
             className="md:hidden p-2 text-foreground"
+            aria-label={isOpen ? "Close menu" : "Open menu"}
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </motion.button>
