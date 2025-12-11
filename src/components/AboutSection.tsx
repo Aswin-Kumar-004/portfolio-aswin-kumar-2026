@@ -6,8 +6,8 @@ import { Code, Palette, Rocket, Award } from "lucide-react";
 const stats = [
   { icon: Code, label: "ML Projects", value: "10+" },
   { icon: Award, label: "Years Experience", value: "1+" },
-  { icon: Palette, label: "Internships", value: "2" },
-  { icon: Rocket, label: "CGPA", value: "1.1" },
+  { icon: Palette, label: "Internships", value: "3" },
+  { icon: Rocket, label: "CGPA", value: "1.1 Honours" },
 ];
 
 const AboutSection = () => {
@@ -74,7 +74,7 @@ const AboutSection = () => {
               variants={itemVariants}
             >
               I'm a passionate Data Scientist with expertise in Python, SQL, and deploying scalable ML and LLM models. 
-              Currently pursuing my MSc in Data Science & Analytics at Maynooth University with 1.1 Honours, 
+              Having completed my MSc in Data Science & Analytics at Maynooth University with 1.1 Honours, 
               I specialize in machine learning, deep learning, and computer vision applications.
             </motion.p>
 
@@ -82,16 +82,16 @@ const AboutSection = () => {
               className="font-rajdhani text-lg text-muted-foreground mb-8 leading-relaxed"
               variants={itemVariants}
             >
-              With hands-on experience at Rubixe AI Solutions and e-con Systems, I've worked on 
-              customer segmentation, Power BI dashboards, and computer vision projects that delivered 
-              measurable business impact. Based in Dublin, Ireland with Stamp 1G valid until 2027.
+              My industry experience at Rubixe AI Solutions and e-con Systems includes developing customer segmentation models,
+              creating analytics dashboards, and automating image-processing pipelines that drove measurable business improvements. 
+              Based in Dublin, Ireland, I hold Stamp 1G valid until 2027.
             </motion.p>
 
             <motion.div
               className="flex flex-wrap gap-3"
               variants={itemVariants}
             >
-              {["Python", "PyTorch", "Scikit-learn", "Power BI", "Azure", "PostgreSQL", "FastAPI", "Docker"].map((tech) => (
+              {["Python", "PyTorch", "Scikit-learn", "Power BI", "Azure", "PostgreSQL", "FastAPI", "Docker", "RAG", "LLM", "Computer Vision", "Machine Learning", "Deep Learning"].map((tech) => (
                 <span
                   key={tech}
                   className="px-4 py-2 glass-card text-sm font-rajdhani text-primary border border-primary/30"

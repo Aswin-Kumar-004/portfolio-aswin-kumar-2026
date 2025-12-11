@@ -25,20 +25,24 @@ interface EducationExperience extends BaseExperience {
 type ExperienceItem = WorkExperience | EducationExperience;
 
 const experiences: WorkExperience[] = [
+
     {
         type: "work",
-        role: "Data Scientist",
-        company: "e-con Systems",
-        period: "2021 - 2023",
-        description: "Worked on computer vision projects and delivered measurable business impact.",
-    },
-    {
-        type: "work",
-        role: "Machine Learning Intern",
+        role: "Data Scientist ",
         company: "Rubixe AI Solutions",
-        period: "2020 - 2021",
-        description: "Hands-on experience with customer segmentation and Power BI dashboards.",
+        period: "02/2024 - 09/2024",
+        description:
+            "Collected and cleaned large-scale customer and transaction datasets from SQL Server and flat files. Applied clustering techniques such as K-Means and DBSCAN for customer segmentation, delivering actionable insights that improved campaign effectiveness by 15%. Built interactive Power BI dashboards to visualize sales trends, segmentation outcomes, and customer engagement metrics.",
     },
+    {
+        type: "work",
+        role: "Computer Vision Engineer",
+        company: "e-con Systems",
+        period: "01/2023 - 08/2023",
+        description:
+            "Analyzed device log data using Python and Excel, reducing issue resolution time by 40%. Designed and deployed Power BI dashboards to support R&D and leadership KPIs. Automated image-processing workflows using Python and OpenCV, improving operational efficiency by 45%. Worked with 3D cameras, performing calibration, validation, and troubleshooting to ensure product quality and meet customer requirements.",
+    },
+
 ];
 
 const education: EducationExperience[] = [
@@ -46,8 +50,18 @@ const education: EducationExperience[] = [
         type: "education",
         degree: "MSc in Data Science & Analytics",
         institution: "Maynooth University",
-        period: "2023 - Present",
-        description: "Achieved 1.1 Honours. Specializing in machine learning, deep learning, and computer vision.",
+        period: "09/2024 - 09/2025",
+        description:
+            "Graduated with 1.1 Honours. Completed advanced modules in Machine Learning & Neural Networks, Bayesian Analysis, Big Data Analytics (Azure), Spatial Databases, R Programming, and System Development & Project Management. Developed strong expertise in ML, deep learning, AI, LLM workflows, data engineering, and analytical modeling.",
+    },
+
+    {
+        type: "education",
+        degree: "B.E in Electronics and Communication Engineering",
+        institution: "R.M.K. Engineering College, Anna University",
+        period: "07/2019 - 06/2023",
+        description:
+            "Graduated with 8.98 CGPA (First Class with Distinction). Completed core modules in Data Structures in C, Python Programming, Networking, and Design & Analysis of Algorithms. Developed a strong foundation in programming, system design, and analytical problem-solving that supports my current work in machine learning, AI, and data science.",
     },
 ];
 
@@ -71,11 +85,11 @@ const ExperienceCard = ({ item, index }: { item: ExperienceItem; index: number }
                 <div className="absolute left-0 top-0 w-4 h-4 bg-primary rounded-full z-10 box-content border-4 border-background md:hidden" />
 
                 {/* Content Card */}
-                <div className={`md:w-[45%] mb-8 md:mb-0 ${isWork ? "text-right" : "text-left"}`}>
+                <div className={`md:w-[45%] mb-8 md:mb-0 text-left`}>
                     <div className="glass-card p-6 relative overflow-hidden group-hover:border-primary/50 transition-colors duration-300">
-                        <div className={`absolute top-0 w-1 h-full bg-primary ${isWork ? "right-0" : "left-0"} opacity-50`} />
+                        <div className={`absolute top-0 w-1 h-full bg-primary left-0 opacity-50`} />
 
-                        <div className={`flex items-center gap-2 mb-2 text-primary ${isWork ? "justify-end" : "justify-start"}`}>
+                        <div className={`flex items-center gap-2 mb-2 text-primary justify-start`}>
                             <Icon size={18} />
                             <span className="font-rajdhani text-sm tracking-wider uppercase">{item.type}</span>
                         </div>
@@ -88,7 +102,7 @@ const ExperienceCard = ({ item, index }: { item: ExperienceItem; index: number }
                             {item.type === "work" ? item.company : item.institution}
                         </h4>
 
-                        <div className={`flex items-center gap-2 text-muted-foreground text-sm mb-4 ${isWork ? "justify-end" : "justify-start"}`}>
+                        <div className={`flex items-center gap-2 text-muted-foreground text-sm mb-4 justify-start`}>
                             <Calendar size={14} />
                             <span>{item.period}</span>
                         </div>
@@ -110,7 +124,23 @@ const ExperienceSection = () => {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, margin: "-100px" });
 
-    const allItems = [...education, ...experiences];
+    const parseDate = (dateStr: string) => {
+        if (dateStr.toLowerCase() === "present") return new Date();
+        const [month, year] = dateStr.split("/");
+        return new Date(parseInt(year), parseInt(month) - 1);
+    };
+
+    const allItems = [...education, ...experiences].sort((a, b) => {
+        const getEndDate = (period: string) => {
+            const parts = period.split(" - ");
+            return parts.length > 1 ? parts[1].trim() : parts[0].trim();
+        };
+
+        const dateA = parseDate(getEndDate(a.period));
+        const dateB = parseDate(getEndDate(b.period));
+
+        return dateB.getTime() - dateA.getTime();
+    });
 
     return (
         <section
