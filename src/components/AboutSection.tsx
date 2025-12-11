@@ -4,10 +4,10 @@ import { useRef } from "react";
 import { Code, Palette, Rocket, Award } from "lucide-react";
 
 const stats = [
-  { icon: Code, label: "Projects Completed", value: "50+" },
-  { icon: Award, label: "Years Experience", value: "5+" },
-  { icon: Palette, label: "Design Awards", value: "10+" },
-  { icon: Rocket, label: "Happy Clients", value: "30+" },
+  { icon: Code, label: "ML Projects", value: "10+" },
+  { icon: Award, label: "Years Experience", value: "1+" },
+  { icon: Palette, label: "Internships", value: "2" },
+  { icon: Rocket, label: "CGPA", value: "1.1" },
 ];
 
 const AboutSection = () => {
@@ -63,35 +63,35 @@ const AboutSection = () => {
               className="font-orbitron text-3xl md:text-5xl font-bold mb-6"
               variants={itemVariants}
             >
-              Passionate{" "}
-              <span className="gradient-text">Full-Stack Developer</span>
+              Graduate{" "}
+              <span className="gradient-text">Data Scientist</span>
               <br />
-              & Creative Designer
+              & ML Engineer
             </motion.h2>
 
             <motion.p
               className="font-rajdhani text-lg text-muted-foreground mb-6 leading-relaxed"
               variants={itemVariants}
             >
-              I'm a creative developer with a passion for building immersive web experiences. 
-              With expertise in React, Three.js, and modern web technologies, I create 
-              applications that are not only functional but also visually stunning.
+              I'm a passionate Data Scientist with expertise in Python, SQL, and deploying scalable ML and LLM models. 
+              Currently pursuing my MSc in Data Science & Analytics at Maynooth University with 1.1 Honours, 
+              I specialize in machine learning, deep learning, and computer vision applications.
             </motion.p>
 
             <motion.p
               className="font-rajdhani text-lg text-muted-foreground mb-8 leading-relaxed"
               variants={itemVariants}
             >
-              My journey in tech started 5 years ago, and since then I've worked with 
-              startups and enterprises alike, delivering solutions that push the boundaries 
-              of what's possible on the web.
+              With hands-on experience at Rubixe AI Solutions and e-con Systems, I've worked on 
+              customer segmentation, Power BI dashboards, and computer vision projects that delivered 
+              measurable business impact. Based in Dublin, Ireland with Stamp 1G valid until 2027.
             </motion.p>
 
             <motion.div
               className="flex flex-wrap gap-3"
               variants={itemVariants}
             >
-              {["React", "TypeScript", "Three.js", "Node.js", "AWS", "Figma"].map((tech) => (
+              {["Python", "PyTorch", "Scikit-learn", "Power BI", "Azure", "PostgreSQL", "FastAPI", "Docker"].map((tech) => (
                 <span
                   key={tech}
                   className="px-4 py-2 glass-card text-sm font-rajdhani text-primary border border-primary/30"

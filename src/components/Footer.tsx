@@ -2,8 +2,8 @@ import { motion } from "framer-motion";
 import { Github, Linkedin, Twitter, Youtube, Instagram, Heart } from "lucide-react";
 
 const socialLinks = [
-  { icon: Github, href: "#", label: "GitHub" },
-  { icon: Linkedin, href: "#", label: "LinkedIn" },
+  { icon: Github, href: "https://github.com/Aswin-Kumar-004", label: "GitHub" },
+  { icon: Linkedin, href: "https://www.linkedin.com/in/aswin-kumar-viswanathan/", label: "LinkedIn" },
   { icon: Twitter, href: "#", label: "Twitter" },
   { icon: Youtube, href: "#", label: "YouTube" },
   { icon: Instagram, href: "#", label: "Instagram" },
@@ -56,7 +56,7 @@ const Footer = () => {
             transition={{ delay: 0.3, duration: 0.6 }}
             className="font-orbitron text-2xl font-bold gradient-text mb-4"
           >
-            PORTFOLIO
+            ASWIN KUMAR
           </motion.a>
 
           {/* Copyright */}

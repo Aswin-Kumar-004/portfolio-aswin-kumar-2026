@@ -31,7 +31,7 @@ const HeroSection = () => {
             transition={{ delay: 0.2, duration: 0.8 }}
             className="font-rajdhani text-lg md:text-xl text-primary mb-4 tracking-widest uppercase"
           >
-            Welcome to my world
+            Hello, I'm
           </motion.p>
           
           <motion.h1
@@ -40,10 +40,9 @@ const HeroSection = () => {
             transition={{ delay: 0.4, duration: 0.8, ease: "easeOut" }}
             className="font-orbitron text-4xl md:text-6xl lg:text-8xl font-bold mb-6"
           >
-            <span className="text-foreground">I'm a </span>
-            <span className="gradient-text glow-text">Creative</span>
+            <span className="gradient-text glow-text">Aswin Kumar</span>
             <br />
-            <span className="gradient-text glow-text">Developer</span>
+            <span className="text-foreground text-3xl md:text-4xl lg:text-5xl">Data Scientist & ML Engineer</span>
           </motion.h1>
 
           <motion.p
@@ -52,8 +51,8 @@ const HeroSection = () => {
             transition={{ delay: 0.6, duration: 0.8 }}
             className="font-rajdhani text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-12"
           >
-            Crafting immersive digital experiences with cutting-edge technologies.
-            Full-stack developer passionate about 3D graphics, animations, and user experience.
+            Graduate Data Scientist with 1+ years of experience in Python, SQL, and deploying scalable ML and LLM models. 
+            MSc in Data Science & Analytics from Maynooth University.
           </motion.p>
 
           <motion.div
