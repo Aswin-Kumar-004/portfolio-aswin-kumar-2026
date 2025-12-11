@@ -13,13 +13,13 @@ const HeroSection = () => {
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
       <Scene3D />
-      
+
       {/* Gradient overlays */}
       <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-transparent to-background pointer-events-none" />
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-[120px] animate-pulse" />
       <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-accent/20 rounded-full blur-[100px] animate-pulse" style={{ animationDelay: "1s" }} />
 
-      <div className="relative z-10 container mx-auto px-6 text-center">
+      <div className="relative z-10 container mx-auto px-6 text-center pb-20">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
@@ -33,7 +33,7 @@ const HeroSection = () => {
           >
             Hello, I'm
           </motion.p>
-          
+
           <motion.h1
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -51,7 +51,7 @@ const HeroSection = () => {
             transition={{ delay: 0.6, duration: 0.8 }}
             className="font-rajdhani text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-12"
           >
-            Graduate Data Scientist with 1+ years of experience in Python, SQL, and deploying scalable ML and LLM models. 
+            Graduate Data Scientist with 1+ years of experience in Python, SQL, and deploying scalable ML and LLM models.
             MSc in Data Science & Analytics from Maynooth University.
           </motion.p>
 
@@ -99,7 +99,7 @@ const HeroSection = () => {
             opacity: { delay: 1.2, duration: 0.8 },
             y: { repeat: Infinity, duration: 2, ease: "easeInOut" }
           }}
-          className="absolute bottom-10 left-1/2 -translate-x-1/2 text-primary"
+          className="absolute bottom-4 left-1/2 -translate-x-1/2 text-primary"
         >
           <ChevronDown size={40} />
         </motion.button>

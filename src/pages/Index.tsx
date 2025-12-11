@@ -5,11 +5,12 @@ import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
 import ProjectsSection from "@/components/ProjectsSection";
 import SkillsSection from "@/components/SkillsSection";
-import ArticlesSection from "@/components/ArticlesSection";
+import CertificatesSection from "@/components/CertificatesSection";
 import ResumeSection from "@/components/ResumeSection";
 import CallToAction from "@/components/CallToAction";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
+import ExperienceSection from "@/components/ExperienceSection";
 
 const Index = () => {
   return (
@@ -21,14 +22,16 @@ const Index = () => {
     >
       <ParticlesBackground />
       <Navigation />
-      
+
       <main>
+
         <HeroSection />
         <AboutSection />
+        <ExperienceSection />
         <ProjectsSection />
         <SkillsSection />
         <ResumeSection />
-        <ArticlesSection />
+        <CertificatesSection />
         <CallToAction />
         <ContactSection />
       </main>

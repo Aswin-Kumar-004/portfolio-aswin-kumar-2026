@@ -82,8 +82,8 @@ const ContactSection = () => {
               Let's work together
             </h3>
             <p className="font-rajdhani text-lg text-muted-foreground mb-8 leading-relaxed">
-              I'm always excited to work on new projects and collaborate with 
-              creative minds. Whether you have a project in mind or just want 
+              I'm always excited to work on new projects and collaborate with
+              creative minds. Whether you have a project in mind or just want
               to chat, feel free to reach out!
             </p>
 

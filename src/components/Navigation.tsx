@@ -6,10 +6,10 @@ import { useNavigate, useLocation } from "react-router-dom";
 const navItems = [
   { name: "Home", href: "#hero", isSection: true },
   { name: "About", href: "#about", isSection: true },
+  { name: "Experience", href: "#experience", isSection: true },
   { name: "Projects", href: "#projects", isSection: true },
   { name: "Skills", href: "#skills", isSection: true },
-  { name: "Certificates", href: "/certificates", isSection: false },
-  { name: "Articles", href: "#articles", isSection: true },
+  { name: "Certificates", href: "#certificates", isSection: true },
   { name: "Contact", href: "#contact", isSection: true },
 ];
 
@@ -46,7 +46,7 @@ const Navigation = () => {
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="fixed top-0 left-0 right-0 z-50 px-6 py-4"
+        className="fixed top-0 left-0 right-0 z-50 px-6 py-4 bg-background/80 backdrop-blur-md border-b border-white/5"
       >
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <motion.a
