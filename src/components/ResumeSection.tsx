@@ -58,7 +58,7 @@ const ResumeSection = () => {
               Full Resume
             </h3>
             <p className="font-rajdhani text-muted-foreground mb-8">
-              PDF format • Updated December 2024
+              PDF format • Updated December 2025
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

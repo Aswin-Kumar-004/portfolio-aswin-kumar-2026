@@ -3,19 +3,19 @@ import { useInView } from "framer-motion";
 import { useRef, useEffect, useState } from "react";
 
 const skills = [
-  { name: "React / Next.js", level: 95, color: "from-cyan-400 to-blue-500" },
-  { name: "TypeScript", level: 90, color: "from-blue-400 to-indigo-500" },
-  { name: "Three.js / WebGL", level: 85, color: "from-purple-400 to-pink-500" },
-  { name: "Node.js", level: 88, color: "from-green-400 to-teal-500" },
-  { name: "Python", level: 82, color: "from-yellow-400 to-orange-500" },
-  { name: "AWS / Cloud", level: 78, color: "from-orange-400 to-red-500" },
-  { name: "PostgreSQL / MongoDB", level: 85, color: "from-teal-400 to-cyan-500" },
-  { name: "Docker / DevOps", level: 75, color: "from-pink-400 to-purple-500" },
+  { name: "Python (Pandas, NumPy, OpenCV)", level: 95, color: "from-cyan-400 to-blue-500" },
+  { name: "Machine Learning / Deep Learning", level: 90, color: "from-blue-400 to-indigo-500" },
+  { name: "PyTorch / Scikit-learn", level: 88, color: "from-purple-400 to-pink-500" },
+  { name: "Power BI / Data Visualization", level: 92, color: "from-green-400 to-teal-500" },
+  { name: "SQL (PostgreSQL, MySQL)", level: 88, color: "from-yellow-400 to-orange-500" },
+  { name: "Azure (Data Factory, Databricks)", level: 78, color: "from-orange-400 to-red-500" },
+  { name: "LLM / RAG Systems", level: 82, color: "from-teal-400 to-cyan-500" },
+  { name: "FastAPI / Docker", level: 75, color: "from-pink-400 to-purple-500" },
 ];
 
 const tools = [
-  "VS Code", "Figma", "Git", "Postman", "Docker", "AWS", 
-  "Vercel", "GitHub Actions", "Jest", "Cypress"
+  "VS Code", "Jupyter", "Git", "Docker", "Azure", "MongoDB",
+  "Power Query", "Matplotlib", "Seaborn", "XGBoost"
 ];
 
 const SkillBar = ({ skill, index, isInView }: { skill: typeof skills[0]; index: number; isInView: boolean }) => {
@@ -155,10 +155,17 @@ const SkillsSection = () => {
                 Coding Profiles
               </h3>
               <div className="flex flex-wrap gap-4">
-                {["LeetCode", "GitHub", "SkillRack", "HackerRank"].map((platform, index) => (
+                {[
+                  { name: "GitHub", url: "https://github.com/Aswin-Kumar-004" },
+                  { name: "LinkedIn", url: "https://www.linkedin.com/in/aswin-kumar-viswanathan/" },
+                  { name: "LeetCode", url: "#" },
+                  { name: "SkillRack", url: "#" }
+                ].map((platform, index) => (
                   <motion.a
-                    key={platform}
-                    href="#"
+                    key={platform.name}
+                    href={platform.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     initial={{ opacity: 0, y: 20 }}
                     animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                     transition={{ delay: index * 0.1 + 1, duration: 0.4 }}
@@ -166,7 +173,7 @@ const SkillsSection = () => {
                     whileTap={{ scale: 0.95 }}
                     className="px-6 py-3 glass-card border border-primary/30 font-rajdhani text-primary hover:bg-primary/10 transition-all duration-300"
                   >
-                    {platform}
+                    {platform.name}
                   </motion.a>
                 ))}
               </div>
