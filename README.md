@@ -1,8 +1,10 @@
 # Aswin Kumar - Portfolio
 
-![Portfolio Preview](https://portfolio-aswin-kumar.web.app/)
+[![Live Demo](https://img.shields.io/badge/demo-online-green.svg)](https://portfolio-aswin-kumar.web.app/)
 
 A modern, high-performance portfolio website built with React, TypeScript, and Vite. This project showcases my skills in Data Science, Machine Learning, and Full-Stack Development through an immersive, interactive user experience.
+
+**[✨ View Live Portfolio](https://portfolio-aswin-kumar.web.app/)**
 
 ## ✨ Features
 
