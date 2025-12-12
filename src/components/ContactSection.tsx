@@ -108,7 +108,7 @@ const ContactSection = () => {
             </div>
 
             {/* Social links preview */}
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ delay: 0.8, duration: 0.6 }}
@@ -129,7 +129,7 @@ const ContactSection = () => {
                   </motion.a>
                 ))}
               </div>
-            </motion.div>
+            </motion.div> */}
           </motion.div>
 
           {/* Contact Form */}
@@ -152,7 +152,7 @@ const ContactSection = () => {
                     onChange={handleChange}
                     required
                     className="w-full px-4 py-3 bg-secondary/50 border border-border rounded-lg font-rajdhani text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors"
-                    placeholder="John Doe"
+                    placeholder=""
                   />
                 </div>
                 <div>
@@ -167,7 +167,7 @@ const ContactSection = () => {
                     onChange={handleChange}
                     required
                     className="w-full px-4 py-3 bg-secondary/50 border border-border rounded-lg font-rajdhani text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors"
-                    placeholder="john@example.com"
+                    placeholder=""
                   />
                 </div>
               </div>
@@ -184,7 +184,7 @@ const ContactSection = () => {
                   onChange={handleChange}
                   required
                   className="w-full px-4 py-3 bg-secondary/50 border border-border rounded-lg font-rajdhani text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors"
-                  placeholder="Project Inquiry"
+                  placeholder=""
                 />
               </div>
 
@@ -200,7 +200,7 @@ const ContactSection = () => {
                   required
                   rows={5}
                   className="w-full px-4 py-3 bg-secondary/50 border border-border rounded-lg font-rajdhani text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors resize-none"
-                  placeholder="Tell me about your project..."
+                  placeholder=""
                 />
               </div>
 

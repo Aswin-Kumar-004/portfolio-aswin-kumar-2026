@@ -4,9 +4,7 @@ import { Github, Linkedin, Twitter, Youtube, Instagram, Heart } from "lucide-rea
 const socialLinks = [
   { icon: Github, href: "https://github.com/Aswin-Kumar-004", label: "GitHub" },
   { icon: Linkedin, href: "https://www.linkedin.com/in/aswin-kumar-viswanathan/", label: "LinkedIn" },
-  { icon: Twitter, href: "#", label: "Twitter" },
-  { icon: Youtube, href: "#", label: "YouTube" },
-  { icon: Instagram, href: "#", label: "Instagram" },
+  { icon: Instagram, href: "https://www.instagram.com/aswin_kumar_official/", label: "Instagram" },
 ];
 
 const Footer = () => {
