@@ -13,10 +13,10 @@ const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Helmet>
-        <title>Creative Developer Portfolio | Full-Stack Developer & Designer</title>
+        <title>Aswin Kumar Portfolio | ML Engineer & Full-Stack Developer</title>
         <meta name="description" content="Explore my portfolio showcasing immersive web experiences, 3D graphics, and innovative applications. Full-stack developer specializing in React, Three.js, and modern web technologies." />
         <meta name="keywords" content="web developer, full-stack developer, React developer, Three.js, portfolio, 3D graphics, UI/UX designer" />
-        <meta property="og:title" content="Creative Developer Portfolio" />
+        <meta property="og:title" content="Aswin Kumar Portfolio" />
         <meta property="og:description" content="Immersive web experiences with cutting-edge technologies. Full-stack developer passionate about 3D graphics and animations." />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />

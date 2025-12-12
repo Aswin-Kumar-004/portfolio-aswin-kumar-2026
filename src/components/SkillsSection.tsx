@@ -15,7 +15,7 @@ const skills = [
 
 const tools = [
   "VS Code", "Jupyter", "Git", "Docker", "Azure", "MongoDB",
-  "Power Query", "Matplotlib", "Seaborn", "XGBoost"
+  "Power Query", "Matplotlib", "Seaborn", "XGBoost", "Antigravity"
 ];
 
 const SkillBar = ({ skill, index, isInView }: { skill: typeof skills[0]; index: number; isInView: boolean }) => {
@@ -158,8 +158,7 @@ const SkillsSection = () => {
                 {[
                   { name: "GitHub", url: "https://github.com/Aswin-Kumar-004" },
                   { name: "LinkedIn", url: "https://www.linkedin.com/in/aswin-kumar-viswanathan/" },
-                  { name: "LeetCode", url: "#" },
-                  { name: "SkillRack", url: "#" }
+                  { name: "LeetCode", url: "https://leetcode.com/u/aswinkumar2361/" }
                 ].map((platform, index) => (
                   <motion.a
                     key={platform.name}

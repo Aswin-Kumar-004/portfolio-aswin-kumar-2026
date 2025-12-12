@@ -15,7 +15,7 @@ const ResumeSection = () => {
     >
       {/* Background */}
       <div className="absolute inset-0 animated-gradient-bg opacity-50" />
-      
+
       <div className="container mx-auto px-6 relative z-10">
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
@@ -63,7 +63,8 @@ const ResumeSection = () => {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.a
-                href="#"
+                href="/resume.pdf"
+                download="Aswin_Kumar_Resume.pdf"
                 whileHover={{ scale: 1.05, boxShadow: "0 0 40px hsl(180 100% 50% / 0.5)" }}
                 whileTap={{ scale: 0.95 }}
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary text-primary-foreground font-rajdhani font-semibold rounded-lg glow-border transition-all duration-300"
@@ -71,9 +72,11 @@ const ResumeSection = () => {
                 <Download className="w-5 h-5" />
                 Download PDF
               </motion.a>
-              
+
               <motion.a
-                href="#"
+                href="/resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-border text-foreground font-rajdhani font-semibold rounded-lg hover:border-primary hover:bg-primary/10 transition-all duration-300"
