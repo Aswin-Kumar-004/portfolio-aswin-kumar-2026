@@ -5,40 +5,40 @@ import { ExternalLink, Github, ArrowRight } from "lucide-react";
 
 const projects = [
   {
+    title: "Cyberpunk Portfolio 2026",
+    description: "A modern, high-performance portfolio website built with React, TypeScript, and Vite. Features immersive 3D effects, smooth animations, and a responsive cyberpunk-themed design.",
+    tech: ["React", "TypeScript", "Tailwind", "Framer Motion"],
+    image: "public/og-image.png", // Using the placeholder as requested by user previously, or a relevant abstract image
+    github: "https://github.com/Aswin-Kumar-004/portfolio-aswin-kumar-2026",
+    live: "https://portfolio-aswin-kumar.web.app",
+    color: "from-cyan-500 to-blue-500",
+  },
+  {
     title: "GANs for Cell Culture Counting",
     description: "Achieved 92% segmentation accuracy using a Pix2Pix GAN on custom 256×256 microscopy image pairs. Integrated into a real-time automated cancer cell counting pipeline.",
     tech: ["PyTorch", "OpenCV", "Pandas", "ImageJ"],
     image: "https://images.unsplash.com/photo-1576086213369-97a306d36557?w=800&auto=format&fit=crop",
     github: "https://github.com/Aswin-Kumar-004/Application-of-GANs-to-microscopy-image-for-cell-culture-counting",
-    live: "#",
-    color: "from-cyan-500 to-blue-500",
+    live: "https://github.com/Aswin-Kumar-004/Application-of-GANs-to-microscopy-image-for-cell-culture-counting", // User requested same link
+    color: "from-purple-500 to-pink-500",
+  },
+  {
+    title: "ArXiv Paper Curator 2.0",
+    description: "Automated tool for curating and organizing research papers from ArXiv. Features smart filtering, metadata extraction, and automated weekly summaries for researchers.",
+    tech: ["Python", "ArXiv API", "Automation", "NLP"],
+    image: "https://images.unsplash.com/photo-1456324504439-367cee3b3c32?w=800&auto=format&fit=crop",
+    github: "https://github.com/Aswin-Kumar-004/arxiv-paper-curator-2.0",
+    live: "https://github.com/Aswin-Kumar-004/arxiv-paper-curator-2.0",
+    color: "from-orange-500 to-red-500",
   },
   {
     title: "Restaurant Takeaway App",
     description: "Led the design and development of a customer-focused restaurant takeaway web application utilizing MERN, enhancing user engagement and operational efficiency by 40%.",
     tech: ["MongoDB", "Express", "React", "Node.js"],
     image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=800&auto=format&fit=crop",
-    github: "#",
-    live: "#",
-    color: "from-purple-500 to-pink-500",
-  },
-  {
-    title: "ML Demo Project",
-    description: "Machine learning demonstration project showcasing various ML algorithms and techniques with practical implementations.",
-    tech: ["Python", "Scikit-learn", "Jupyter", "Pandas"],
-    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&auto=format&fit=crop",
-    github: "https://github.com/Aswin-Kumar-004/ML_Demo_Project",
-    live: "#",
+    github: "https://github.com/Abenesh-Ramesh/Restaurant-Takeaway-Site",
+    live: "https://github.com/Abenesh-Ramesh/Restaurant-Takeaway-Site",
     color: "from-green-500 to-teal-500",
-  },
-  {
-    title: "ArXiv Paper Curator",
-    description: "Automated tool for curating and organizing research papers from ArXiv, helping researchers stay updated with the latest publications.",
-    tech: ["Python", "API", "Automation", "MIT License"],
-    image: "https://images.unsplash.com/photo-1456324504439-367cee3b3c32?w=800&auto=format&fit=crop",
-    github: "https://github.com/Aswin-Kumar-004/arxiv-paper-curator-2.0",
-    live: "#",
-    color: "from-orange-500 to-red-500",
   },
 ];
 
@@ -79,7 +79,7 @@ const ProjectCard = ({ project, index }: { project: typeof projects[0]; index: n
           <h3 className="font-orbitron text-xl md:text-2xl font-bold text-foreground mb-2">
             {project.title}
           </h3>
-          
+
           <motion.p
             className="font-rajdhani text-foreground/80 mb-4 line-clamp-2"
             animate={{ opacity: isHovered ? 1 : 0.8 }}
